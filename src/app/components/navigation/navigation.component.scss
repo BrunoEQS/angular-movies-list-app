@@ -1,0 +1,32 @@
+.navigation {
+  height: 8rem;
+  background-color: var(--color-card-background);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    display: block;
+    max-width: 100%;
+    width: 15rem;
+    height: auto;
+
+    @media (min-width: 768px) {
+      width: 20rem;
+    }
+  }
+
+  &__switcher {
+    display: block;
+    min-width: 20rem;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    font-family: var(--font-secondary);
+
+    @media (min-width: 768px) {
+      min-width: 30rem;
+    }
+  }
+}

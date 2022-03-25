@@ -1,1 +1,17 @@
-<p>navigation works!</p>
+<nav class="navigation">
+  <img class="logo" src="../../../assets/images/tmdb-logo.svg" alt="" />
+  <select
+    id="languages"
+    class="navigation__switcher"
+    #langSelect
+    (change)="translate.use(langSelect.value)"
+  >
+    <option
+      *ngFor="let lang of translate.getLangs()"
+      [value]="lang"
+      [selected]="lang === translate.currentLang"
+    >
+      {{ lang }}
+    </option>
+  </select>
+</nav>
