@@ -1,0 +1,11 @@
+{
+  "HOME": {
+    "TITLE": "Welcome to MovieFinder",
+    "SELECT": "Change language",
+    "BODY": "Discover the latest movies in our database"
+  },
+  "CARD": {
+    "RELEASE": "Release Date",
+    "RATING": "Rating"
+  }
+}

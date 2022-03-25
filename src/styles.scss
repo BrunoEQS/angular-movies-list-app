@@ -1,0 +1,35 @@
+/* Variables */
+:root {
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Nunito", sans-serif;
+  --color-background-black: #27283a;
+  --color-text-black: #211f30;
+  --color-text-gray: #bbbbbb;
+  --color-text-white: #f7f7f7;
+  --color-card-background: #15141f;
+  --color-accent: #5d5fef;
+}
+
+/* General */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5;
+  background-color: var(--color-background-black);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 2rem auto;
+  padding: 0 2rem 0 2rem;
+}

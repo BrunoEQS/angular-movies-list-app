@@ -1,0 +1,18 @@
+<header class="header">
+  <h1 class="header__title">{{ "HOME.TITLE" | translate }}</h1>
+  <div class="header__select">
+    <label for="languages" class="header__select-label">
+        {{ "HOME.SELECT" | translate }}
+      </label>
+      <select id="languages" class="header__select-dropdown" #langSelect (change)="translate.use(langSelect.value)">
+        <option
+          *ngFor="let lang of translate.getLangs()"
+          [value]="lang"
+          [selected]="lang === translate.currentLang"
+        >
+          {{ lang }}
+        </option>
+      </select>
+  </div>
+  <p class="header__intro">{{ "HOME.BODY" | translate }}</p>
+</header>

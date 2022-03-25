@@ -1,0 +1,43 @@
+.header {
+  padding: 3rem 0;
+
+  &__title {
+    color: var(--color-text-white);
+    font-size: 3.4rem;
+    font-family: var(--font-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-label {
+        display: block;
+        color: var(--color-text-white);
+        font-size: 1.8rem;
+        font-family: var(--font-secondary);
+        margin-bottom: 0.5rem;
+    }
+
+    &-dropdown {
+        display: block;
+        min-width: 30rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border-radius: 0.4rem;
+        font-size: 1.6rem;
+        font-family: var(--font-secondary);
+        font-weight: 700;
+    }
+  }
+
+  &__intro {
+    color: var(--color-text-white);
+    font-size: 1.8rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 3rem;
+  }
+}
