@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 /* Components */
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         deps: [HttpClient],
       },
     }),
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent],

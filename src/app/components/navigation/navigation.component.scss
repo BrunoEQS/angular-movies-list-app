@@ -28,6 +28,10 @@
     border-radius: 0.4rem;
     font-size: 1.6rem;
     font-family: var(--font-secondary);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../../../assets/images/chevron_down_icon.svg") 95% / 6% no-repeat #EEE;
 
     @media (min-width: 414px) {
       min-width: 20rem;

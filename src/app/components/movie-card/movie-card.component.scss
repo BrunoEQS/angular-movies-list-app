@@ -77,3 +77,35 @@
     }
   }
 }
+
+/* Pagination */
+.custom-pagination ::ng-deep .ngx-pagination {
+  margin: 3rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: var(--font-primary);
+
+  li {
+    color: var(--color-text-white);
+
+    a {
+      color: var(--color-text-white);
+      padding: 0.8rem 1.6rem;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background: var(--color-accent);
+      }
+    }
+  }
+
+  .pagination-previous,
+  .pagination-next {
+    display: none;
+  }
+
+  .current {
+    padding: 0.8rem 1.6rem;
+    background: var(--color-accent);
+  }
+}

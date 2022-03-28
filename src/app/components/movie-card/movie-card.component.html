@@ -1,5 +1,8 @@
 <ul class="movies-list">
-  <li class="movie-card" *ngFor="let movie of movies">
+  <li
+    class="movie-card"
+    *ngFor="let movie of movies | paginate: { itemsPerPage: 6, currentPage: p }"
+  >
     <div class="movie-card__header">
       <figure class="movie-card__header-poster">
         <img
@@ -24,3 +27,4 @@
     </div>
   </li>
 </ul>
+<pagination-controls class="custom-pagination" (pageChange)="p = $event"></pagination-controls>

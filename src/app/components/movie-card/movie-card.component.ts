@@ -18,7 +18,6 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent implements OnInit {
-
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'de', 'it']);
     translate.setDefaultLang('en');
@@ -27,9 +26,11 @@ export class MovieCardComponent implements OnInit {
     translate.use(browserLang.match(/en|de|it|/) ? browserLang : 'en');
   }
 
+  p: number = 1; // default number of pages
   movies: Movie[] = [];
 
-  imgURL = 'https://image.tmdb.org/t/p/w300/';
+  moviePosterSize = 300;
+  imgURL = `https://image.tmdb.org/t/p/w${this.moviePosterSize}/`;
   endpoint: string = `https://api.themoviedb.org/3/discover/movie?api_key=${environment.MOVIES_DATABASE_TOKEN}`;
 
   ngOnInit(): void {
