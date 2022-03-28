@@ -1,1 +1,39 @@
-<p>movie-details works!</p>
+<div class="container">
+  <div class="movie-details">
+    <div class="movie-details">
+      <figure class="movie-details__poster">
+        <img
+          src="{{ imgURL }}{{ movieDetails.poster_path }}"
+          alt="{{ movieDetails.title }}"
+        />
+      </figure>
+    </div>
+    <div class="movie-card__body">
+      <h3 class="movie-card__body-title">{{ movieDetails.title }}</h3>
+      <div class="movie-card__body-extras">
+        <div class="movie-card__body-extras--date">
+          <h4>{{ "CARD.RELEASE" | translate }}</h4>
+          <p>{{ movieDetails.release_date }}</p>
+        </div>
+        <div class="movie-card__body-extras--rating">
+          <h4>{{ "CARD.RATING" | translate }}</h4>
+          <p>{{ movieDetails.vote_average }}</p>
+        </div>
+        <div class="movie-card__body-extras--status">
+          <h4>Status</h4>
+          <p>{{ movieDetails.status }}</p>
+        </div>
+        <div class="movie-card__body-extras--language">
+          <h4>Original Language</h4>
+          <p>{{ movieDetails.original_language }}</p>
+        </div>
+      </div>
+      <div>
+        <ul class="movie-details__info-genres">
+          <li *ngFor="let genre of movieGenres">{{ genre.name }}</li>
+        </ul>
+      </div>
+      <p class="movie-card__body-overview">{{ movieDetails.overview }}</p>
+    </div>
+  </div>
+</div>

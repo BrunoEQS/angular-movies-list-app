@@ -16,7 +16,7 @@ import { Movie } from '../../../types/Movie';
 export class MovieCardComponent implements OnInit {
   constructor() {}
 
-  p: number = 1; // default number of pages
+  p: number = 1; // pagination: default starting page
   movies: Movie[] = [];
 
   moviePosterSize = 300;
