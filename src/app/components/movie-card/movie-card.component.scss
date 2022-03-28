@@ -3,10 +3,13 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 3rem;
 
+  a {
+    text-decoration: none;
+  }
+
   .movie-card {
     background-color: var(--color-card-background);
     border-radius: 2rem;
-    cursor: pointer;
 
     &__header {
       &-poster {

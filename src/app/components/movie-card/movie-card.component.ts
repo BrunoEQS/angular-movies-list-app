@@ -8,29 +8,19 @@ import { environment } from '../../../environments/environment';
 
 /* Types */
 import { Movie } from '../../../types/Movie';
-
-/* Localization */
-import { TranslateService } from '@ngx-translate/core';
-
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent implements OnInit {
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'de', 'it']);
-    translate.setDefaultLang('en');
-
-    const browserLang = translate.getBrowserLang()!;
-    translate.use(browserLang.match(/en|de|it|/) ? browserLang : 'en');
-  }
+  constructor() {}
 
   p: number = 1; // default number of pages
   movies: Movie[] = [];
 
   moviePosterSize = 300;
-  imgURL = `https://image.tmdb.org/t/p/w${this.moviePosterSize}/`;
+  imgURL: string = `https://image.tmdb.org/t/p/w${this.moviePosterSize}/`;
   endpoint: string = `https://api.themoviedb.org/3/discover/movie?api_key=${environment.MOVIES_DATABASE_TOKEN}`;
 
   ngOnInit(): void {

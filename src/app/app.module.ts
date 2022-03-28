@@ -11,13 +11,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, NavigationComponent, MovieCardComponent],
+  declarations: [AppComponent, HeaderComponent, NavigationComponent, MovieCardComponent, MovieDetailsComponent, PageNotFoundComponent, MoviesComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -28,7 +32,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         deps: [HttpClient],
       },
     }),
-    NgxPaginationModule
+    NgxPaginationModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
