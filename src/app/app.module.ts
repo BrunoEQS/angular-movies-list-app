@@ -9,13 +9,14 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, NavigationComponent],
+  declarations: [AppComponent, HeaderComponent, NavigationComponent, MovieCardComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

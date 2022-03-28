@@ -2,34 +2,9 @@
 <app-navigation></app-navigation>
 
 <div class="container">
-  
   <!-- Header -->
   <app-header></app-header>
 
-  <ul class="movies-list">
-    <li class="movie-card" *ngFor="let movie of movies">
-      <div class="movie-card__header">
-        <figure class="movie-card__header-poster">
-          <img
-            src="{{ imgURL }}{{ movie.poster_path }}"
-            alt="{{ movie.title }}"
-          />
-        </figure>
-      </div>
-      <div class="movie-card__body">
-        <h3 class="movie-card__body-title">{{ movie.title }}</h3>
-        <div class="movie-card__body-extras">
-          <div class="movie-card__body-extras--date">
-            <h4>{{ "CARD.RELEASE" | translate }}</h4>
-            <p>{{ movie.release_date }}</p>
-          </div>
-          <div class="movie-card__body-extras--rating">
-            <h4>{{ "CARD.RATING" | translate }}</h4>
-            <p>{{ movie.vote_average }}</p>
-          </div>
-        </div>
-        <p class="movie-card__body-overview">{{ movie.overview }}</p>
-      </div>
-    </li>
-  </ul>
+  <!-- Movies Cards -->
+  <app-movie-card></app-movie-card>
 </div>
