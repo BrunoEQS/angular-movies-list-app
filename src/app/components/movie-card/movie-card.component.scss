@@ -10,6 +10,7 @@
   .movie-card {
     background-color: var(--color-card-background);
     border-radius: 2rem;
+    height: 100%;
 
     &__header {
       &-poster {

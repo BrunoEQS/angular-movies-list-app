@@ -1,0 +1,43 @@
+.page-wrapper {
+  padding: 1rem;
+  min-height: 100vh;
+  background: url("../../../assets/images/page-not-found.svg") no-repeat center center/cover;
+
+  @media (min-width: 64em) {
+    padding: 5rem;
+  }
+
+  .text-wrapper {
+    .headline {
+      color: var(--color-text-white);
+      font-size: 4rem;
+      font-family: var(--font-primary);
+      margin-bottom: 1rem;
+    }
+
+    .sub-headline {
+      color: var(--color-text-white);
+      font-size: 2rem;
+      font-family: var(--font-secondary);
+      margin-bottom: 3rem;
+    }
+  }
+
+  .illustration {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .back-home-link {
+    display: inline-block;
+    color: var(--color-text-white);
+    font-size: 1.6rem;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    background-color: var(--color-accent);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.4rem;
+  }
+}

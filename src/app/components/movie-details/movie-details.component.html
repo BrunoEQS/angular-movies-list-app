@@ -1,39 +1,44 @@
 <div class="container">
+  <app-header></app-header>
+  
   <div class="movie-details">
-    <div class="movie-details">
-      <figure class="movie-details__poster">
-        <img
-          src="{{ imgURL }}{{ movieDetails.poster_path }}"
-          alt="{{ movieDetails.title }}"
-        />
-      </figure>
-    </div>
-    <div class="movie-card__body">
-      <h3 class="movie-card__body-title">{{ movieDetails.title }}</h3>
-      <div class="movie-card__body-extras">
-        <div class="movie-card__body-extras--date">
+    <figure class="movie-details__poster">
+      <img
+        src="{{ imgURL }}{{ movieDetails.poster_path }}"
+        alt="{{ movieDetails.title }}"
+      />
+    </figure>
+    <div class="movie-details__info">
+      <h3 class="movie-details__info-title">{{ movieDetails.title }}</h3>
+      <div class="movie-details__info-extras">
+        <div class="movie-details__info-extras--date">
           <h4>{{ "CARD.RELEASE" | translate }}</h4>
           <p>{{ movieDetails.release_date }}</p>
         </div>
-        <div class="movie-card__body-extras--rating">
+        <div class="movie-details__info-extras--rating">
           <h4>{{ "CARD.RATING" | translate }}</h4>
           <p>{{ movieDetails.vote_average }}</p>
         </div>
-        <div class="movie-card__body-extras--status">
+        <div class="movie-details__info-extras--status">
           <h4>Status</h4>
           <p>{{ movieDetails.status }}</p>
         </div>
-        <div class="movie-card__body-extras--language">
+        <div class="movie-details__info-extras--language">
           <h4>Original Language</h4>
-          <p>{{ movieDetails.original_language }}</p>
+          <p>{{ movieDetails.original_language | uppercase }}</p>
         </div>
       </div>
-      <div>
-        <ul class="movie-details__info-genres">
-          <li *ngFor="let genre of movieGenres">{{ genre.name }}</li>
-        </ul>
-      </div>
-      <p class="movie-card__body-overview">{{ movieDetails.overview }}</p>
+      <ul class="movie-details__info-extras--genres">
+        <li *ngFor="let genre of movieGenres">{{ genre.name }}</li>
+      </ul>
+      <p class="movie-details__info--overview">{{ movieDetails.overview }}</p>
+      <a
+        href="{{ movieDetails.homepage }}"
+        class="movie-details__info--homepage"
+        rel="noopener noreferrer"
+        target="_blank"
+        >Read More</a
+      >
     </div>
   </div>
 </div>

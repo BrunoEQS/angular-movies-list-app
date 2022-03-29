@@ -1,76 +1,114 @@
 .movie-details {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 10rem;
 
-  .movie-card {
-    background-color: var(--color-card-background);
-    border-radius: 2rem;
+  @media (min-width: 64em) {
+    grid-template-columns: 1fr 4fr;
+  }
 
-    &__header {
-      &-poster {
-        img {
-          display: block;
-          width: 100%;
-          max-width: 100%;
-          height: auto;
-          border-top-left-radius: 2rem;
-          border-top-right-radius: 2rem;
-        }
+  &__poster {
+    img {
+      display: block;
+      border-top-right-radius: 2rem;
+      border-top-left-radius: 2rem;
+      width: 100%;
+      height: 100%;
+
+      @media (min-width: 64em) {
+        width: auto;
+        border-top-right-radius: 0;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
       }
     }
+  }
 
-    &__body {
-      padding: 3.5rem 3rem;
+  &__info {
+    padding: 3.5rem 3rem;
+    background-color: var(--color-card-background);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 
-      &-title {
-        color: var(--color-text-white);
-        font-size: 2rem;
-        font-family: var(--font-primary);
-        margin-bottom: 2rem;
+    @media (min-width: 64em) {
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+    }
+
+    &-title {
+      color: var(--color-text-white);
+      font-size: 2rem;
+      font-family: var(--font-primary);
+      margin-bottom: 2rem;
+    }
+
+    &-extras {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+
+      &--date,
+      &--rating,
+      &--status,
+      &--language {
+        margin-bottom: 1rem;
+
+        h4 {
+          font-size: 1.8rem;
+          color: var(--color-text-white);
+          font-family: var(--font-primary);
+        }
+        p {
+          color: var(--color-text-gray);
+          font-size: 1.6rem;
+          font-family: var(--font-secondary);
+        }
+
+        &:not(:last-child) {
+          margin-right: 1.6rem;
+        }
       }
 
-      &-extras {
+      &--genres {
+        list-style-type: none;
+        color: var(--color-text-gray);
+        font-size: 1.6rem;
+        font-family: var(--font-secondary);
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 2rem;
 
-        &--date {
-          margin-right: 1.6rem;
-          h4 {
-            font-size: 1.8rem;
-            color: var(--color-text-white);
-            font-family: var(--font-primary);
-          }
-          p {
-            color: var(--color-text-gray);
-            font-size: 1.6rem;
-            font-family: var(--font-primary);
-          }
-        }
-
-        &--rating {
-          h4 {
-            font-size: 1.8rem;
-            color: var(--color-text-white);
-            font-family: var(--font-primary);
-          }
-
-          p {
-            color: var(--color-text-gray);
-            font-size: 1.6rem;
-            font-family: var(--font-primary);
+        li {
+          &:not(:last-child) {
+            margin-right: 1.6rem;
           }
         }
       }
+    }
 
-      &-overview {
-        color: var(--color-text-white);
-        font-size: 1.6rem;
-        font-family: var(--font-secondary);
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        overflow: hidden;
+    &--overview {
+      color: var(--color-text-white);
+      font-size: 1.6rem;
+      font-family: var(--font-secondary);
+    }
+
+    &--homepage {
+      display: inline-block;
+      color: var(--color-text-white);
+      font-size: 1.6rem;
+      font-family: var(--font-secondary);
+      font-weight: 700;
+      background-color: var(--color-accent);
+      text-decoration: none;
+      margin-top: 3rem;
+      padding: 1rem 1.5rem;
+      border-radius: 0.4rem;
+      width: 100%;
+      text-align: center;
+
+      @media (min-width: 64em) {
+        width: auto;
       }
     }
   }

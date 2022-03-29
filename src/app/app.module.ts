@@ -15,13 +15,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, NavigationComponent, MovieCardComponent, MovieDetailsComponent, PageNotFoundComponent, MoviesComponent],
+  declarations: [AppComponent, HeaderComponent, NavigationComponent, MovieCardComponent, MovieDetailsComponent, PageNotFoundComponent, MoviesComponent, FooterComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

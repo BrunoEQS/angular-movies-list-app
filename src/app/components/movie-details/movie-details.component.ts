@@ -5,8 +5,6 @@ import { of } from 'rxjs';
 import { fromFetch } from 'rxjs/fetch';
 import { switchMap, catchError } from 'rxjs/operators';
 
-/* import { MovieDetails } from '../../../types/Movie'; */
-
 /* ENV Variables */
 import { environment } from '../../../environments/environment';
 @Component({

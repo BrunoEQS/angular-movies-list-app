@@ -8,15 +8,17 @@
 
   .logo {
     display: block;
-    max-width: 100%;
-    width: 12rem;
-    height: auto;
+    color: var(--color-accent);
+    font-size: 4rem;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    text-decoration: none;
 
-    @media (min-width: 414px) {
+    @media (min-width: 25.875em) { // = 414px
       width: 15rem;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 48em) { // = 768px
       width: 20rem;
     }
   }
@@ -33,11 +35,11 @@
     appearance: none;
     background: url("../../../assets/images/chevron_down_icon.svg") 95% / 6% no-repeat #EEE;
 
-    @media (min-width: 414px) {
+    @media (min-width: 25.875em) {
       min-width: 20rem;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
       min-width: 30rem;
     }
   }
